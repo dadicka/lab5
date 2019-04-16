@@ -137,3 +137,58 @@
 09:39:04.953 INFO  - Refreshed build settings on project hello_world 
 10:33:44.745 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
 10:36:10.473 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:29:48.689 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+09:29:49.117 ERROR - Unable to read in MSS file D:\RA241-2017\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:29:49.129 ERROR - Unable to read in MSS file D:\RA241-2017\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:29:49.163 WARN  - Unable to determine location of documentation for OS . 
+09:29:49.166 ERROR - Unable to read in MSS file D:\RA241-2017\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:29:49.173 ERROR - Unable to read in MSS file D:\RA241-2017\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:30:41.733 ERROR - Unable to read in MSS file D:\RA241-2017\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:30:42.883 ERROR - Unable to read in MSS file D:\RA241-2017\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:30:42.888 ERROR - Unable to read in MSS file D:\RA241-2017\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:30:42.889 WARN  - Unable to determine location of documentation for OS . 
+09:30:42.892 ERROR - Unable to read in MSS file D:\RA241-2017\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:30:42.898 ERROR - Unable to read in MSS file D:\RA241-2017\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:30:52.583 ERROR - Unable to read in MSS file D:\RA241-2017\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:30:52.763 ERROR - Unable to read in MSS file D:\RA241-2017\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:30:52.770 ERROR - Unable to read in MSS file D:\RA241-2017\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:30:52.779 ERROR - Unable to read in MSS file D:\RA241-2017\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:30:52.788 ERROR - Unable to read in MSS file D:\RA241-2017\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:31:01.722 ERROR - Unable to read in MSS file D:\RA241-2017\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:31:01.727 ERROR - Unable to read in MSS file D:\RA241-2017\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:31:01.728 INFO  - Settings changed on project hello_world_bsp. Triggering a rebuild... 
+09:31:02.002 ERROR - Unable to read in MSS file D:\RA241-2017\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:31:08.209 INFO  - Settings changed on project hello_world_bsp. Triggering a rebuild... 
+09:33:53.943 INFO  - FPGA configured successfully with bitstream "D:/RA241-2017/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:47:03.626 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:47:10.726 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:47:38.072 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:48:11.569 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:55:02.136 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:56:18.167 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:56:22.567 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:57:30.945 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:57:47.008 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:59:15.967 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:59:26.471 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:02:03.163 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:02:32.811 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:02:39.369 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:02:59.220 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:03:51.390 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:04:41.144 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:05:42.900 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:06:01.760 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:06:21.627 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:06:49.895 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:07:03.355 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:17:58.412 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+10:17:58.434 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+10:17:58.435 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
