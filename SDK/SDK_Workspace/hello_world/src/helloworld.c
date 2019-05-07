@@ -40,14 +40,42 @@
 #include "xparameters.h"
 #include "xio.h"
 #include "vga_periph_mem.h"
-
+#include "xintc.h"
 
 void print(char *str);
+static XIntc Intc;
+static int i = 0;
+static int raste = 1;
+static unsigned char string_s[] = "LPRS 2\n";
+void vga_irq_handler(void *arg) {
+
+	    set_cursor(i);
+		clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+		print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 6);
+		draw_square1(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, i);
+
+		if (raste == 1) {
+			if (i < 400) {
+				i++;
+			}
+			else {
+				raste = 0;
+			}
+		}
+		else if (raste == 0) {
+			if (i > 0) {
+				i--;
+			}
+			else {
+				raste = 1;
+			}
+		}
+
+}
 
 int main()
 {
     init_platform();
-    unsigned char string_s[] = "LPRS 2\n";
 
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x00, 0x0);// direct mode   0
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x04, 0x3);// display_mode  1
@@ -56,32 +84,20 @@ int main()
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x10, 0xFFFFFF);// foreground 4
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x14, 0x0000FF);// background color 5
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x18, 0xFF0000);// frame color      6
+    VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x1C, 480); //  v_sync_counter_tc
+    VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x20, 1); // enable
 
-    print("Hello World\n\r");
+    XIntc_Initialize (&Intc, XPAR_INTC_0_DEVICE_ID);
+    XIntc_Connect(&Intc, XPAR_AXI_INTC_0_VGA_PERIPH_MEM_0_IRQ_O_INTR, vga_irq_handler, NULL);
+    XIntc_Start(&Intc, XIN_REAL_MODE);
+    XIntc_Enable(&Intc, XPAR_AXI_INTC_0_VGA_PERIPH_MEM_0_IRQ_O_INTR);
+
+    microblaze_enable_interrupts();
 
     clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
-    while (1) {
-    	int i;
-    	int j;
-    	for (i = 0; i < 138; i++) {
-    		set_cursor(i);
-    	    clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
-    		print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 6);
-    		draw_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + i);
-    	    for (j = 0; j < 3e3; j++) {}   // busy wait
-    	}
-    	for (i = 138; i > 0; i--) {
-    		set_cursor(i);
-    	    clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
-    		print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 6);
-    		draw_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + i);
-    		for (j = 0; j < 3e3; j++) {}   // busy wait
-    	}
-    }
-    set_cursor(350);
-    print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 6);
 
+    while(1){}
 
     return 0;
 }

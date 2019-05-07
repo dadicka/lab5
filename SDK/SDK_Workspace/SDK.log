@@ -192,3 +192,17 @@
 	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
 
 10:17:58.435 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+09:06:45.574 INFO  - Processing command line option -hwspec D:\RA241-2017\lab5\SDK\SDK_Export\hw\system.xml. 
+09:06:48.497 INFO  - The hardware specification for project 'basic_system_hw_platform' is different from D:\RA241-2017\lab5\SDK\SDK_Export\hw\system.xml. 
+09:06:48.527 INFO  - Copied contents of D:\RA241-2017\lab5\SDK\SDK_Export\hw\system.xml into \basic_system_hw_platform\system.xml. 
+09:06:48.530 INFO  - Copied contents of D:\RA241-2017\lab5\SDK\SDK_Export\hw\system.bit into \basic_system_hw_platform\system.bit. 
+09:06:48.532 INFO  - Copied contents of D:\RA241-2017\lab5\SDK\SDK_Export\hw\system_bd.bmm into \basic_system_hw_platform\system_bd.bmm. 
+09:06:49.020 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+09:06:50.750 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+09:06:50.884 INFO  - Updating MSS for Board Support Package Project: hello_world_bsp.
+		 The following new driver assignments were made:
+			Peripheral Instance: axi_intc_0, driver: intc_v2_06_a.
+ 
+09:06:51.790 INFO  - Updating hardware inferred compiler options for hello_world. 
+09:06:51.795 INFO  - Clearing existing target manager status. 

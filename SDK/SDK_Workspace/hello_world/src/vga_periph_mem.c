@@ -51,3 +51,17 @@ void draw_square(Xuint32 BaseAddress){
 			}
 		}
 }
+void draw_square1(Xuint32 BaseAddress, int gornja_ivica){
+	int i, j, k;
+	for (j = 0; j < 480; j++){
+		for (k = 0; k < (640 / 32); k++){
+			i = j * (640 / 32) + k;
+			if ((j > gornja_ivica) && (j < gornja_ivica + 80) && (k > 8) && (k < 12)) {
+				VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0xFFFFFFFF);
+			}
+			else{
+				VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0x0);
+			}
+		}
+	}
+}
